@@ -1,0 +1,10 @@
+.vid1{
+    /* background: linear-gradient(117.82deg, #9CECFB -9.12%, #65C7F7 48.59%, #0052D4 106.3%); */
+    box-shadow: 20px 20px 0px 0px rgba(245, 245, 245, 1);
+    position: absolute;
+    z-index: 10;
+}
+
+.homepage_bg {
+    background: url("../assets/Images/bghome.svg");
+}
