@@ -1,5 +1,5 @@
 Live Link - https://study-notion-mega-project-3602xqx0r-dhruv9316.vercel.app/
-
+To know more about this project -> visit https://docs.google.com/document/d/19OZY8J9eDFGxU7w-xrXKS89KYI7EmWqz/edit
 
 #About  React & Tailwind CSS Starter Pack
 
