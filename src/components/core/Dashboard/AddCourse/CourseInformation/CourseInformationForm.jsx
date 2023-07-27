@@ -48,7 +48,7 @@ export default function CourseInformationForm() {
       setValue("courseTitle", course.courseName)
       setValue("courseShortDesc", course.courseDescription)
       setValue("coursePrice", course.price)
-      setValue("courseTags", course.tag)
+      // setValue("courseTags", course.tag)
       setValue("courseBenefits", course.whatYouWillLearn)
       setValue("courseCategory", course.category)
       setValue("courseRequirements", course.instructions)
@@ -66,7 +66,7 @@ export default function CourseInformationForm() {
       currentValues.courseTitle !== course.courseName ||
       currentValues.courseShortDesc !== course.courseDescription ||
       currentValues.coursePrice !== course.price ||
-      currentValues.courseTags.toString() !== course.tag.toString() ||
+      // currentValues.courseTags.toString() !== course.tag.toString() ||
       currentValues.courseBenefits !== course.whatYouWillLearn ||
       currentValues.courseCategory._id !== course.category._id ||
       currentValues.courseRequirements.toString() !==
@@ -101,9 +101,9 @@ export default function CourseInformationForm() {
         if (currentValues.coursePrice !== course.price) {
           formData.append("price", data.coursePrice)
         }
-        if (currentValues.courseTags.toString() !== course.tag.toString()) {
-          formData.append("tag", JSON.stringify(data.courseTags))
-        }
+        // if (currentValues.courseTags.toString() !== course.tag.toString()) {
+        //   formData.append("tag", JSON.stringify(data.courseTags))
+        // }
         if (currentValues.courseBenefits !== course.whatYouWillLearn) {
           formData.append("whatYouWillLearn", data.courseBenefits)
         }
@@ -140,7 +140,7 @@ export default function CourseInformationForm() {
     formData.append("courseName", data.courseTitle)
     formData.append("courseDescription", data.courseShortDesc)
     formData.append("price", data.coursePrice)
-    formData.append("tag", JSON.stringify(data.courseTags))
+    // formData.append("tag", JSON.stringify(data.courseTags))
     formData.append("whatYouWillLearn", data.courseBenefits)
     formData.append("category", data.courseCategory)
     formData.append("status", COURSE_STATUS.DRAFT)
@@ -248,7 +248,7 @@ export default function CourseInformationForm() {
         )}
       </div>
       {/* Course Tags */}
-      <ChipInput
+      {/* <ChipInput
         label="Tags"
         name="courseTags"
         placeholder="Enter Tags and press Enter"
@@ -256,7 +256,7 @@ export default function CourseInformationForm() {
         errors={errors}
         setValue={setValue}
         getValues={getValues}
-      />
+      /> */}
       {/* Course Thumbnail Image */}
       <Upload
         name="courseImage"

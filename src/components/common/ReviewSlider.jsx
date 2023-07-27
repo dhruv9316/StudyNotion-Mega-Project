@@ -55,7 +55,7 @@ function ReviewSlider() {
           modules={[FreeMode, Pagination, Autoplay]}
           breakpoints={{
             1024 : {
-              slidesPerView : 3,
+              slidesPerView : 4,
             },
           }}
           className="w-full "
