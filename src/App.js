@@ -81,11 +81,11 @@ function App() {
         />  
 
     <Route
-          path="update-password/:id"
+          path="update-password/:token"
           element={
             <OpenRoute>
               <UpdatePassword />
-            </OpenRoute>
+            </OpenRoute> 
           }
         />  
 
