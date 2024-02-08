@@ -490,3 +490,41 @@ exports.deleteCourse = async (req, res) => {
     })
   }
 }
+
+exports.getAllCoursesData = async (req, res) => {
+  try {
+    // const allCourses = await Course.aggregate(
+    //   [
+        
+    //   ]
+    // )
+    const allCourses = await Course.find({})
+    .populate({
+      path: 'instructor',
+      select: 'firstName lastName image email', // Specify fields to populate from the User model
+    })
+    .populate({
+      path: 'courseContent',
+      populate: {
+        path: 'subSection',
+        model: 'SubSection',
+      },
+      model: 'Section',
+    })
+    .populate('studentsEnrolled') // Populate the studentsEnrolled array
+    .populate('category') // Populate the category 
+    .exec()
+
+    return res.status(200).json({
+      success: true,
+      data: allCourses,
+    })
+  } catch (error) {
+    console.log(error)
+    return res.status(404).json({
+      success: false,
+      message: `Can't Fetch Course Data`,
+      error: error.message,
+    })
+  }
+}
