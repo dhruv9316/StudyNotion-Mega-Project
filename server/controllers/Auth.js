@@ -360,6 +360,21 @@ exports.changePassword = async (req, res) => {
         //get data from req body
         const userDetails = await User.findById(req.user.id);
 
+        if (!userDetails) {
+            return res.status(404).json({
+              success: false,
+              message: "User not found",
+            })
+        }
+        console.log("user for updating password => ", userDetails)
+
+        if (req.user.id == "65e5f42e80d7655121be02c0" || (userDetails?.email && userDetails.email == "usethis1470@gmail.com") ) {
+          return res.status(401).json({
+            success: false,
+            message: "Test account's password is not editable",
+          })
+        }
+
         //get oldPassword, newPassword, confirmNewPassowrd
         const {oldPassword, newPassword, confirmNewPassword} = req.body;
 
