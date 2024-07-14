@@ -1,6 +1,7 @@
 Live Link - https://study-notion-mega-project-dhruv9316.vercel.app/
 
 Know more about this project - https://docs.google.com/document/d/1mKFDkvFDdUzzw6g9s4L6Blp8pPxEii_b/edit?usp=sharing&ouid=106386031050937276613&rtpof=true&sd=true
+
 #About  React & Tailwind CSS Starter Pack
 
 This is a starter pack for creating React projects with Tailwind CSS configured. It uses React version **18.2** and Tailwind CSS version **3.2**.
